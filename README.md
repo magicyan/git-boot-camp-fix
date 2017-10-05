@@ -1,17 +1,20 @@
-<<<<<<< HEAD
 # git_boot_camp
 git boot camp
 
-git commit -a
-git add と git commit を一辺にするためのコマンド。
-=======
-# git_boot_camp
-git boot camp
+1.git add
+git add コマンドは追加されたファイルなどをバージョン管理の対象として追加するコマンド。
+オプションに「.」を指定して、ファイルをまとめてコマンドを実行することもできる。
+
 
 2.git commit
 　コマンドの説明：ファイルやディレクトリの追加・変更を、リポジトリに記録するときに使う操作です。
 　ハマるポイント：1.の「git add」をしていないと、ファイルを変更していても記録されません。
 　便利なオプション：「git commit -m コミットメッセージ 」で、直接コミットメッセージを入力できます
+
+3.git commit -a
+git commit -a
+git add と git commit を一辺にするためのコマンド。
+
 
 5. git branch fix/42
 
@@ -38,4 +41,3 @@ git branch 自体は、branchの作成、リスト、削除が行えるコマン
     新規ブランチの作成後、現在のブランチを新規ブランチに切り替える (-b)
 ・git commit
     現在のブランチの修正をリポジトリに反映させる
->>>>>>> 2a589f917bd55511e21b07c98cfbe1abc9ec2ecb
