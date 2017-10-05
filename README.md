@@ -9,11 +9,11 @@ git boot camp
 
 git branch <branch_name>
 
-��������Υ�ݥ��ȥ���Ф��ơ��֥��� <branch_name> ��������ޤ���
-�֥�����������ޤ�����HEAD �ϰ�ư���ޤ���
-�֥������ڤ��ؤ���ˤϡ�git checkout <branch_name> ��¹Ԥ���ɬ�פ�����ޤ���
+ローカルのリポジトリに対して、ブランチ <branch_name> を作成します。
+ブランチを作成しますが、HEAD は移動しません。
+ブランチに切り替えるには、git checkout <branch_name> を実行する必要があります。
 
-git status ��¹Ԥ��ơ����ɤΥ֥�����ˤ��뤫���ǧ���Ƥ����Ȥ�Ԥ��ޤ��礦��
+git status を実行して、今どのブランチ上にいるかを確認してから作業を行いましょう。
 
 ----------------
 $ git status
@@ -21,7 +21,7 @@ On branch id/14
 .....
 ----------------
 
-git branch ���Τϡ�branch�κ������ꥹ�ȡ�������Ԥ��륳�ޥ�ɤǡ����ץ��������̤ˤ���ޤ���
+git branch 自体は、branchの作成、リスト、削除が行えるコマンドで、オプションも大量にあります。
 
 
 
