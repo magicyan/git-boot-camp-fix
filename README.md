@@ -15,6 +15,7 @@ git add コマンドは追加されたファイルなどをバージョン管理
 git commit -a
 git add と git commit を一辺にするためのコマンド。
 
+## 4.git commit -amend
 
 ## 5. git branch fix/42
 
@@ -54,6 +55,8 @@ HEAD INDEX 作業ディレクトリの状態をもとに戻すという意味に
 「--soft」HEAD は指定したコミットやHEADの状態になりますが、INDEXと作業ディレクトリには変更が加わりません。→直近のコミットを取り消し（git commit --amendと同じ結果）
 参考:
 https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E3%81%95%E3%81%BE%E3%81%96%E3%81%BE%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB-%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E8%A9%B3%E8%AA%AC
+
+## 9.git merge fix/42
 
 ## 10. git rebase -i A〜E
 
@@ -109,6 +112,9 @@ To check out the original branch and stop rebasing, run "git rebase --abort".
 ※ちなみに、先生の説明によると、フィルの中間部分などへの変更であれば、同一ファイルであってもうまく行くのではないか、ということでした。
 ※実際、ファイルの中間であれば、うまく行きました。
 
+## 11.凡例（読み上げなくてよいです）
+
+## 12.git checkout fix/42
 
 ## 13.git rebase master
 　複数のブランチを切って作業しているとマージがあちらこちらで行われるため、入り組んで見にくくなります。
@@ -134,12 +140,20 @@ ffはfastforwardの略。
 このオプションによってログが一本になり、トピックブランチがあったという情報がなくなる。
 
 ## 15.git merge --no-ff fix/42
-　コマンドの説明：「fix/42」ブランチと現在のHEADがあるブランチをマージする時に、non-fast-forwardでマージするというコマンドです。
-　使い所：fastforwardでマージできるが、あえてマージコミットを作成して目印にしたい、トピックブランチとして枝分かれして開発をしていたという履歴を残したい場合などに利用します。
+- コマンドの説明：「fix/42」ブランチと現在のHEADがあるブランチをマージする時に、non-fast-forwardでマージするというコマンドです。
+- 使い所：fastforwardでマージできるが、あえてマージコミットを作成して目印にしたい、トピックブランチとして枝分かれして開発をしていたという履歴を残したい場合などに利用します。
+
+## 16.git fetch --all
+
+## 17.git remote add;git fetch --all
 
 ## 18 git pull
  git fetch と git merageの両方をするためのコマンド
  競合が発生した場合は、該当部分を手動で直してマージし直す必要があります。
+
+## 19.git pull --rebase
+
+## 20.git push
 
 ## 21. git cherry pick 2
     現在選択中のブランチに、2のコミット(別のブランチに存在)のみを反映する。
@@ -153,3 +167,7 @@ git checkout master
 git cherry-pick 2
 ```
     ブランチでの作業中に不具合等が発覚して修正したのちに、不具合修正部分のみをメインブランチに反映するのに有用らしい。
+
+## 22.git init
+
+## 23.git clone
