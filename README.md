@@ -11,6 +11,11 @@ git add コマンドは追加されたファイルなどをバージョン管理
 　ハマるポイント：1.の「git add」をしていないと、ファイルを変更していても記録されません。
 　便利なオプション：「git commit -m コミットメッセージ 」で、直接コミットメッセージを入力できます
 
+3.git commit -a
+git commit -a
+git add と git commit を一辺にするためのコマンド。
+
+
 5. git branch fix/42
 
 git branch <branch_name>
@@ -37,6 +42,7 @@ git branch 自体は、branchの作成、リスト、削除が行えるコマン
 ・git commit
     現在のブランチの修正をリポジトリに反映させる
 
+<<<<<<< HEAD
 13.git rebase master
 　複数のブランチを切って作業しているとマージがあちらこちらで行われるため、入り組んで見にくくなります。
 　こういう時に役立つのが、git rebase です。
@@ -56,3 +62,21 @@ git branch 自体は、branchの作成、リスト、削除が行えるコマン
 
 
 
+=======
+18 git pull
+ git fetch と git merageの両方をするためのコマンド
+ 競合が発生した場合は、該当部分を手動で直してマージし直す必要があります。
+
+21. git cherry pick 2
+    現在選択中のブランチに、2のコミット(別のブランチに存在)のみを反映する。
+    一旦反映したいブランチ上のコミットをログを含め確認したのちに、反映したいブランチに移動後に
+    行うようにした方がよい
+```
+git checkout feature/test
+git log
+．．．．
+git checkout master
+git cherry-pick 2
+```
+    ブランチでの作業中に不具合等が発覚して修正したのちに、不具合修正部分のみをメインブランチに反映するのに有用らしい。
+>>>>>>> 531fd9bfe35b470642820bab915c7288104ba750
