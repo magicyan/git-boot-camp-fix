@@ -60,7 +60,7 @@ git branch 自体は、branchの作成、リスト、削除が行えるコマン
                  「--mixed」HEAD INDEXは指定したコミットやHEADの状態になりますが、作業ディレクトリはそのままです。（オプション指定しない場合のデフォルトはこれ）→直近のコミットと、git addでインデックスに加えた結果が取り消されます。
 
                  「--soft」HEAD は指定したコミットやHEADの状態になりますが、INDEXと作業ディレクトリには変更が加わりません。→直近のコミットを取り消し（git commit --amendと同じ結果）
-
+　　　　　　　　　　参考:https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E3%81%95%E3%81%BE%E3%81%96%E3%81%BE%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB-%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E8%A9%B3%E8%AA%AC
 
 
 
@@ -144,8 +144,11 @@ To check out the original branch and stop rebasing, run "git rebase --abort".
 マージする際に、分岐があったらマージを拒絶してくれるコマンド
 ffはfastforwardの略。
 このオプションによってログが一本になり、トピックブランチがあったという情報がなくなる。
+
 15.git merge --no-ff fix/42
 　コマンドの説明：「fix/42」ブランチと現在のHEADがあるブランチをマージする時に、non-fast-forwardでマージするというコマンドです。
+　使い所：fastforwardでマージできるが、あえてマージコミットを作成して目印にしたい、トピックブランチとして枝分かれして開発をしていたという履歴を残したい場合などに利用します。
+
 18 git pull
  git fetch と git merageの両方をするためのコマンド
  競合が発生した場合は、該当部分を手動で直してマージし直す必要があります。
