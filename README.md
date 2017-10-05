@@ -1,22 +1,22 @@
 # git_boot_camp
 git boot camp
 
-1.git add ファイル名
+##1.git add ファイル名
 git add コマンドは追加されたファイルなどをバージョン管理の対象として追加するコマンド。
 オプションに「.」を指定して、ファイルをまとめてコマンドを実行することもできる。
 
 
-2.git commit
+##2.git commit
 　コマンドの説明：ファイルやディレクトリの追加・変更を、リポジトリに記録するときに使う操作です。
 　ハマるポイント：1.の「git add」をしていないと、ファイルを変更していても記録されません。
 　便利なオプション：「git commit -m コミットメッセージ 」で、直接コミットメッセージを入力できます
 
-3.git commit -a
+##3.git commit -a
 git commit -a
 git add と git commit を一辺にするためのコマンド。
 
 
-5. git branch fix/42
+##5. git branch fix/42
 
 git branch <branch_name>
 
@@ -33,15 +33,15 @@ On branch id/14
 
 git branch 自体は、branchの作成、リスト、削除が行えるコマンドで、オプションも大量にあります。
 
-6.git checkout -b fix/42; git commit
-7.git checkout -b fix/42
+##6.git checkout -b fix/42; git commit
+##7.git checkout -b fix/42
 ・git checkout -b fix/42
     現在のブランチから新規ブランチ(fix/42)を作成する
     新規ブランチの作成後、現在のブランチを新規ブランチに切り替える (-b)
 ・git commit
     現在のブランチの修正をリポジトリに反映させる
 
-8.git reset --hard master
+##8.git reset --hard master
 
 　コマンドの説明：git resetは、以前のコミットを取り消す時などにつかいます。
 
@@ -67,7 +67,7 @@ git branch 自体は、branchの作成、リスト、削除が行えるコマン
 
 
 
-10. git rebase -i A〜E
+##10. git rebase -i A〜E
 
 git rebase -i A を実行すると、A 以降にコミットされたリビジョンの編集を行えます。
 この場合、B,C,D,E が対象となります。
@@ -122,7 +122,7 @@ To check out the original branch and stop rebasing, run "git rebase --abort".
 ※実際、ファイルの中間であれば、うまく行きました。
 
 
-13.git rebase master
+##13.git rebase master
 　複数のブランチを切って作業しているとマージがあちらこちらで行われるため、入り組んで見にくくなります。
 　こういう時に役立つのが、git rebase です。
 　メリットは以下です。
@@ -140,20 +140,20 @@ To check out the original branch and stop rebasing, run "git rebase --abort".
 　m4の後にm2-a1、m2-a1-b1、m2-a1-b2を順番にもう一度コミットを行います。
 
 
-14 git merge --ff-only <branch_name>
+##14 git merge --ff-only <branch_name>
 マージする際に、分岐があったらマージを拒絶してくれるコマンド
 ffはfastforwardの略。
 このオプションによってログが一本になり、トピックブランチがあったという情報がなくなる。
 
-15.git merge --no-ff fix/42
+##15.git merge --no-ff fix/42
 　コマンドの説明：「fix/42」ブランチと現在のHEADがあるブランチをマージする時に、non-fast-forwardでマージするというコマンドです。
 　使い所：fastforwardでマージできるが、あえてマージコミットを作成して目印にしたい、トピックブランチとして枝分かれして開発をしていたという履歴を残したい場合などに利用します。
 
-18 git pull
+##18 git pull
  git fetch と git merageの両方をするためのコマンド
  競合が発生した場合は、該当部分を手動で直してマージし直す必要があります。
 
-21. git cherry pick 2
+##21. git cherry pick 2
     現在選択中のブランチに、2のコミット(別のブランチに存在)のみを反映する。
     一旦反映したいブランチ上のコミットをログを含め確認したのちに、反映したいブランチに移動後に
     行うようにした方がよい
