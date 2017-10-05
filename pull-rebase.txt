@@ -1,5 +1,7 @@
 GIT-PULL(1)                                                                           Git Manual                                                                           GIT-PULL(1)
 
+change1
+
 NAME
        git-pull - Fetch from and integrate with another repository or a local branch
 
